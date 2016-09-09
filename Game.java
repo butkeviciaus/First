@@ -1,17 +1,4 @@
-/*-----How to?-----
-Insertig links
-What's better: to declare methods in beggining and keep base code separated,
-or type code just after method declaration 
 
-
-Importing pokemon ASCII art
-1. Download them as text files
-2. Import using method to replace / with // and so on
-
------To do------
-
-
-*/
 import java.io.*;
 import java.util.*;
 import java.util.Random;
@@ -21,11 +8,12 @@ public class Game {
       BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
       
      
+
     //---------------------First Part-----------------------------------//
     //+++++++++++++++++++++Getting user's name+++++++++++++++++++++++++++//
 
       
-    write(
+      write(
          "<<<<<QUEST GAME.PART 1>>>>>\n"+
          "Player, tell your name, please: "
       );
@@ -55,13 +43,13 @@ public class Game {
       );
       String pokemonChoice = input.readLine();
       pokemonGame(pokemonChoice);
-     //---------------------Fourth Part-----------------------------------//
+    //---------------------Fourth Part-----------------------------------//
     //+++++++++++++++++++++Fighting pokemon+++++++++++++++++++++++++++++++//
-    */
+    
       pokemonFight1();
      
    
-          //---------------------Fifth Part-----------------------------------//
+    //---------------------Fifth Part-----------------------------------//
     //+++++++++++++++++++++Pokemon in the box++++++++++++++++++++++++++++//
 
 
@@ -116,22 +104,26 @@ public class Game {
    public static void diceGame (String dice) throws IOException {
       BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
          int diceValueGuess = Integer.parseInt(dice);
+           
            if ( diceValueGuess >6 || diceValueGuess <1 ){
                write ("Hey, you had one job! Try again and enter a valid number? (1-6)");
            
-           }else{
+           }
+           else{
                Random r = new Random();
                int randomNumber = r.nextInt(5) + 1;
                      if (diceValueGuess != randomNumber){
                            write("No luck, try again next time");
 
-                      } else {
+                      } 
+                      else {
                            write("Greta job, you are totally good in guessing");
-                           }
                       }
+           }
    }
    
-   //Method that let's user choose his pokemon and displays it in ASCII art. Links should be added    
+   //Method that let's user choose his pokemon and displays it in ASCII art. 
+   //Links should be added, doesn't work yet    
    public static void pokemonGame (String pokemon) throws IOException {
       BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
          int pokemonChoice = Integer.parseInt(pokemon);
@@ -155,6 +147,7 @@ public class Game {
                "Here's your Pikachu \n" +
                ""
                //http://www.fiikus.net/asciiart/pokemon/025.txt
+               //pikachu.txt is placed 
             );
           }
           else {
