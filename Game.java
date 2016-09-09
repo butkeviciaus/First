@@ -21,12 +21,11 @@ public class Game {
       BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
       
      
-
     //---------------------First Part-----------------------------------//
     //+++++++++++++++++++++Getting user's name+++++++++++++++++++++++++++//
 
       
-/*    write(
+    write(
          "<<<<<QUEST GAME.PART 1>>>>>\n"+
          "Player, tell your name, please: "
       );
